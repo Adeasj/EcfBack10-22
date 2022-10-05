@@ -25,11 +25,4 @@ class Image
     {
         return $this->DateCreation;
     }
-
-    public function setDateCreation(string $DateCreation): self
-    {
-        $this->DateCreation = $DateCreation;
-
-        return $this;
-    }
 }
