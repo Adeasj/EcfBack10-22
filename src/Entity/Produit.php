@@ -32,8 +32,6 @@ class Produit
     #[ORM\Column]
     private ?bool $actif = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $date_de_creation = null;
 
 
 
@@ -114,17 +112,6 @@ class Produit
         return $this;
     }
 
-    public function getDateDeCreation(): ?\DateTimeInterface
-    {
-        return $this->date_de_creation;
-    }
-
-    public function setDateDeCreation(\DateTimeInterface $date_de_creation): self
-    {
-        $this->date_de_creation = $date_de_creation;
-
-        return $this;
-    }
 
     public function getNom(): ?string
     {
@@ -146,18 +133,6 @@ class Produit
     public function setDescritptionLongue(string $DescritptionLongue): self
     {
         $this->DescritptionLongue = $DescritptionLongue;
-
-        return $this;
-    }
-
-    public function getDateCreation(): ?string
-    {
-        return $this->DateCreation;
-    }
-
-    public function setDateCreation(string $DateCreation): self
-    {
-        $this->DateCreation = $DateCreation;
 
         return $this;
     }
